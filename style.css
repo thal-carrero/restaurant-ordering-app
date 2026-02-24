@@ -1,0 +1,207 @@
+/* Importing typography */
+@import url('https://fonts.googleapis.com/css2?family=Smythe&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Smythe", system-ui;
+
+}
+
+header {
+    background: url(assets/header.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 250px;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 40px;
+    
+}
+
+/* Header */
+.header-title {
+    font-size: 40px;
+}
+
+.header-title, .header-desc {
+    text-shadow: 0 0 15px black;
+}
+
+/* Layout */
+.container {
+    padding: 45px;
+}
+
+/* Menu  */
+
+.menu-item {
+    display: flex;
+   border-bottom: 1px solid #D2D2D2;
+   padding-bottom: 40px;
+   margin-top: 40px;
+
+}
+
+.item-graphic {
+    font-size: 80px;
+    align-self: flex-start;
+    margin-right: 20px;
+}
+
+.item-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-name {
+    font-size: 28px;
+}
+
+.item-desc {
+    color: #8B8B8B;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 6px;
+}
+
+.item-price {
+    font-size: 20px;
+}
+
+.add-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 1.5px solid #DEDEDE;
+    font-family: 'Inter';
+    font-size: 32px;
+    font-weight: 100;   /* Its not working */
+    color: #3C3C3C;
+    margin-left: auto;
+    background-color: white;
+    cursor: pointer;
+    
+}
+
+
+/* Checkout */
+.checkout-section {
+    margin-top: 40px;
+}
+
+.checkout-section h3 {
+    text-align: center;
+    font-size: 28px;
+}
+
+.checkout-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.remove-btn {
+    background-color: white;
+    border: none;
+    color: #BBBBBB;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.checkout-item .item-price {
+    margin-left: auto;
+}
+
+.checkout-total-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid #393333 ;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    font-size: 28px;
+    padding-top: 10px;
+}
+
+.order-btn, .pay-btn {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #16DB99;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 20px;
+    color: white;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+
+}
+
+.payment-modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    box-shadow: 5.19px 5.19px 255.44px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    padding: 20px 10px;
+
+
+}
+
+.payment-modal h3 {
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    margin: 0 auto;
+
+}
+input{
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 20px;
+    outline: none;
+}
+input:active, input:focus {
+    border: 2px solid #16DB99;
+}
+
+.pay-btn {
+    margin-top: 40px;
+}
+
+/* Order complete rectag */
+.order-complete {
+    background-color: rgba(236, 253, 245, 1);
+    text-align: center;
+    margin-top: 30px;
+    font-size: 32px;
+    color: rgba(6, 95, 70, 1);
+    padding: 50px;
+}
+
+/* Utility classes  */
+
+.hidden {
+    display: none;
+}
