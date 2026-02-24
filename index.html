@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thalia's Dinner</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header-title">Thalia's Dinner</h1>
+      <h2 class="header-desc">The best burgers and pizzas in town</h2>
+      <img class="header-img" src="assets/header.jpg" alt="Burger and fries" />
+    </header>
+    <!-- Menu section -->
+    <div class="menu" id="menu">
+      <!--  Here I inject the menu items with JS  -->
+      <div class="menu-item">
+        <p class="item-graphic">🍕</p>
+        <p class="item-name">Pizza</p>
+        <p class="item-desc">pepperoni, onion, mozarella</p>
+        <p class="item-price">$14</p>
+        <button class="add-btn">+</button>
+        <hr />
+      </div>
+    </div>
+    <!-- Checkout Section -->
+    <div class="checkout-section" id="checkout-section">
+      <h3>Your order</h3>
+      <div class="checkout-item" id="checkout-item">
+        <p class="item-name">Pizza</p>
+        <button class="remove-btn">Remove</button>
+        <p class="item-price">$14</p>
+      </div>
+      <div class="checkout-total-wrapper">
+        <p class="checkout-total">Total price</p>
+        <p id="chechout-total">$16</p>
+      </div>
+      <button class="order-btn">Complete Order</button>
+    </div>
+    <!-- Payment Modal  -->
+    <div class="payment-modal" id="payment-modal">
+      <h3>Enter Card Details</h3>
+      <form action="">
+        <input
+          type="text"
+          name="card-name"
+          id="card-name"
+          placeholder="Enter your name"
+          required
+        />
+
+        <input
+          type="text"
+          name="card-number"
+          id="card-number"
+          placeholder="Enter your card number"
+          required
+        />
+        <input
+          type="text"
+          name="card-cvv"
+          id="card-cvv"
+          placeholder="Enter your card CVV"
+        />
+        <button class="pay-btn" type="submit">Pay</button>
+      </form>
+    </div>
+  </body>
+</html>
