@@ -7,6 +7,10 @@ const checkout = document.getElementById("checkout-section")
 const cart = document.querySelector(".cart-elements")
 const order = []
 const checkoutTotal = document.getElementById("checkout-total")
+const orderBtn = document.getElementById("order-btn")
+const paymentModal = document.getElementById("payment-modal")
+const paymentForm = document.getElementById("payment-form")
+const orderComplete = document.getElementById("order-complete")
 
 
 // Render the content of the menu 
@@ -72,3 +76,15 @@ checkout.addEventListener("click", function removeFromCart(e){
 })
 
 
+// Payment 
+orderBtn.addEventListener("click", function openPaymentModal(){
+    paymentModal.classList.toggle('hidden')
+})
+
+paymentForm.addEventListener('submit', function (e){
+    e.preventDefault()
+    paymentModal.classList.toggle('hidden')
+    checkout.classList.add("hidden")
+    orderComplete.classList.remove("hidden")
+
+}) 

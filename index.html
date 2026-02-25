@@ -27,7 +27,7 @@
           <p class="checkout-total">Total price:</p>
           <p id="checkout-total"></p>
         </div>
-        <button class="order-btn">Complete Order</button>
+        <button class="order-btn" id="order-btn">Complete Order</button>
       </div>
       <!-- Payment Modal  -->
       <div class="payment-modal hidden" id="payment-modal">
@@ -47,8 +47,7 @@
             id="card-number"
             placeholder="Enter your card number"
             required
-            pattern="[0-9]"
-            maxlength="16"
+            pattern="[0-9]{16}"
           />
           <input
             type="text"
@@ -57,7 +56,6 @@
             placeholder="Enter your card CVV"
             required
             pattern="[0-9]{3}"
-            maxlength="3"
           />
           <button class="pay-btn" id="pay-btn" type="submit">Pay</button>
         </form>
