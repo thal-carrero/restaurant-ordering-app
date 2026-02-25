@@ -53,7 +53,7 @@ menu.addEventListener("click", function addToCart(e){
   }
 
   function renderOrder(){
-    const cartHtml = order.map(item => {
+    let cartHtml = order.map(item => {
        return `
          <div class="checkout-item">
             <p class="item-name">${item.name}</p>
@@ -61,8 +61,19 @@ menu.addEventListener("click", function addToCart(e){
             <p class="item-price">$${item.price}</p>
         </div>
         `
-    })
-    const orderTotal = order.reduce((total, currentItem) => total + currentItem.price, 0 )
+    }).join('')
+    let orderTotal = order.reduce((total, currentItem) => total + currentItem.price, 0 )
+     if(order.length > 1){
+      const mealDiscount = (orderTotal * 0.20).toFixed(2) // 20% Discount if you order 2 or more items of the menu
+       orderTotal -= mealDiscount
+       cartHtml += `
+        <div class="checkout-item">
+            <p class="item-name">Discount  20%</p>
+            <p class="item-price">-$${mealDiscount}</p>
+        </div>
+       `
+      
+    }
     checkoutTotal.textContent = '$' + orderTotal
     cart.innerHTML = cartHtml
   }
