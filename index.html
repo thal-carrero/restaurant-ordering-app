@@ -15,48 +15,24 @@
     <div class="container">
       <div class="menu" id="menu">
         <!--  Here I inject the menu items with JS  -->
-        <div class="menu-item">
-          <p class="item-graphic">🍕</p>
-          <div class="item-text">
-            <p class="item-name">Pizza</p>
-            <p class="item-desc">pepperoni, onion, mozarella</p>
-            <p class="item-price">$14</p>
-          </div>
-          <button class="add-btn">+</button>
-        </div>
-        <div class="menu-item">
-          <p class="item-graphic">🍕</p>
-          <div class="item-text">
-            <p class="item-name">Pizza</p>
-            <p class="item-desc">pepperoni, onion, mozarella</p>
-            <p class="item-price">$14</p>
-          </div>
-          <button class="add-btn">+</button>
-        </div>
       </div>
       <!-- Checkout Section -->
       <div class="checkout-section hidden" id="checkout-section">
         <h3>Your order</h3>
-        <div class="checkout-item" id="checkout-item">
-          <p class="item-name">Pizza</p>
-          <button class="remove-btn">Remove</button>
-          <p class="item-price">$14</p>
-        </div>
-        <div class="checkout-item" id="checkout-item">
-          <p class="item-name">Pizza</p>
-          <button class="remove-btn">Remove</button>
-          <p class="item-price">$14</p>
+
+        <div class="cart-elements">
+          <!-- Here I inject the items added to the cart with JS -->
         </div>
         <div class="checkout-total-wrapper">
           <p class="checkout-total">Total price:</p>
-          <p id="chechout-total">$16</p>
+          <p id="checkout-total"></p>
         </div>
         <button class="order-btn">Complete Order</button>
       </div>
       <!-- Payment Modal  -->
       <div class="payment-modal hidden" id="payment-modal">
         <h3>Enter Card Details</h3>
-        <form action="">
+        <form id="payment-form">
           <input
             type="text"
             name="card-name"
@@ -83,7 +59,7 @@
             pattern="[0-9]{3}"
             maxlength="3"
           />
-          <button class="pay-btn" type="submit">Pay</button>
+          <button class="pay-btn" id="pay-btn" type="submit">Pay</button>
         </form>
       </div>
       <div class="order-complete hidden" id="order-complete">
